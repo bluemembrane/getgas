@@ -1,0 +1,15 @@
+header {
+  height: 64px;
+}
+
+main {
+  padding: calc(64px + 2rem) 2rem 2rem 2rem;
+  height: 100vh;
+}
+
+.ui.selection.dropdown,
+.ui.dropdown .menu > .item.selected,
+.ui.dropdown .menu > .item {
+  background: theme('colors.slate.900');
+  color: theme('colors.white');
+}
