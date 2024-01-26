@@ -4,7 +4,7 @@ header {
 
 main {
   padding: calc(64px + 2rem) 2rem 2rem 2rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .ui.selection.dropdown,
@@ -12,4 +12,8 @@ main {
 .ui.dropdown .menu > .item {
   background: theme('colors.slate.900');
   color: theme('colors.white');
+}
+
+.ui.selection.dropdown .menu > .item {
+  border-top-width: 0;
 }

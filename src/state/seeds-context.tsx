@@ -8,7 +8,7 @@ export interface Seeds {
 
 export interface Action {
   type: string;
-  data: Partial<Seeds> | undefined;
+  data?: Partial<Seeds>;
 }
 
 const empty: Seeds = {

@@ -14,14 +14,14 @@ function ApiKeyInput() {
         className="text-lg mb-12 w-full bg-transparent border-b-2 border-rose-500 focus:outline-none"
         required
         placeholder="cqt_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        pattern="^cqt_([A-Za-z]{25,35})$"
+        pattern="^cqt_([A-Za-z0-9]{25,35})$"
         onChange={(e) => setApiKey(e.target.value)}
       />
       <p className="text-right">
         <button
           className="bg-rose-500 text-white font-bold py-3 px-4 rounded-md leading-none"
           onClick={() =>
-            /^cqt_([A-Za-z]{25,35})$/.test(apiKey)
+            /^cqt_([A-Za-z0-9]{25,35})$/.test(apiKey)
               ? dispatch({ type: 'addApiKey', data: { apiKey } })
               : null
           }

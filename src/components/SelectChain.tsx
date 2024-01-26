@@ -34,7 +34,7 @@ function SelectChain() {
           className="text-rose-500 font-bold py-3 px-4 rounded-md leading-none"
           onClick={(e) => {
             e.preventDefault();
-            dispatch({ type: 'removeApiKey', data: {} });
+            dispatch({ type: 'removeApiKey' });
           }}
         >
           Previous

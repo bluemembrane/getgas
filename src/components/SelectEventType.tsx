@@ -35,7 +35,7 @@ function SelectEventType() {
           className="text-rose-500 font-bold py-3 px-4 rounded-md leading-none"
           onClick={(e) => {
             e.preventDefault();
-            dispatch({ type: 'removeChain', data: {} });
+            dispatch({ type: 'removeChain' });
           }}
         >
           Previous
