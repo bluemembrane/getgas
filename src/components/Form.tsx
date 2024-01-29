@@ -11,7 +11,7 @@ function Form() {
 
   return (
     <div className="flex justify-center align-center">
-      <form className="max-w-sm">
+      <form className="max-w-sm md:max-w-lg lg:max-w-screen-md">
         {!hasWelcomed ? (
           <Welcome onContinue={() => setHasWelcomed(true)} />
         ) : !seeds.apiKey ? (
