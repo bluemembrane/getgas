@@ -6,6 +6,8 @@ To use, you will have to provide your [Covalent](https://covalenthq.com) API Key
 
 We strongly uphold security and we don't share your Covalent API key. Your key is solely used for obtaining gas prices.
 
+This project is deployed on Vercel at [https://getgas.vercel.app](https://getgas.vercel.app).
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
