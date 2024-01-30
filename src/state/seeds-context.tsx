@@ -4,6 +4,7 @@ export interface Seeds {
   apiKey: string;
   chain: string;
   eventType: string;
+  hasWelcomed: boolean;
 }
 
 export interface Action {
@@ -14,7 +15,8 @@ export interface Action {
 const empty: Seeds = {
   apiKey: '',
   chain: '',
-  eventType: ''
+  eventType: '',
+  hasWelcomed: false
 };
 
 export const SeedsContext = createContext<Seeds>(null as any);
@@ -36,6 +38,9 @@ export function SeedsProvider({ children }: any) {
 
 function seedsReducer(seeds: Seeds, action: Action): Seeds {
   switch (action.type) {
+    case 'hasWelcomed': {
+      return { ...seeds, hasWelcomed: true };
+    }
     case 'addApiKey': {
       if (!action.data || !('apiKey' in action.data!)) {
         throw Error('Provide apiKey in data');
@@ -63,8 +68,9 @@ function seedsReducer(seeds: Seeds, action: Action): Seeds {
     case 'removeEventType': {
       return { ...seeds, eventType: '' };
     }
-    case 'empty': {
-      return { ...empty };
+    case 'reset': {
+      const { apiKey, hasWelcomed } = seeds;
+      return { ...empty, apiKey, hasWelcomed };
     }
     default: {
       throw Error('Unknown action: ' + action.type);

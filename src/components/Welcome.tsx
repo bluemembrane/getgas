@@ -1,4 +1,9 @@
-function Welcome({ onContinue }: any) {
+import { useContext } from 'react';
+import { SeedsDispatchContext } from '../state/seeds-context';
+
+function Welcome() {
+  const dispatch = useContext(SeedsDispatchContext);
+
   return (
     <>
       <h2 className="text-2xl md:text-4xl text-center mb-5 md:mb-12">
@@ -37,7 +42,7 @@ function Welcome({ onContinue }: any) {
       <p className="text-center mb-8">
         <button
           className="bg-rose-500 text-white font-bold py-3 px-4 rounded-md leading-none"
-          onClick={onContinue}
+          onClick={() => dispatch({ type: 'hasWelcomed' })}
         >
           Continue
         </button>

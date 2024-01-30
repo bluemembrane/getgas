@@ -97,7 +97,7 @@ function GasPrices() {
         {' '}
         <button
           className="text-rose-500 bg-slate-900 text-lg font-bold py-3 px-4 rounded-md leading-none"
-          onClick={() => dispatch({ type: 'empty' })}
+          onClick={() => dispatch({ type: 'reset' })}
         >
           Restart
         </button>
